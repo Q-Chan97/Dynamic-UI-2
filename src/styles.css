@@ -1,0 +1,24 @@
+* {
+    box-sizing: border-box;
+}
+
+#carousel-container-div {
+    display: flex;
+    justify-self: center;
+}
+
+.frame-div {
+    border: 2px solid crimson;
+    /* overflow: hidden; */ 
+    width: 720px;
+    height: 405px;
+}
+
+.slides-div {
+    display: flex;
+}
+
+.slides-div img {
+    height: 405px;
+    width: 720px;
+}
