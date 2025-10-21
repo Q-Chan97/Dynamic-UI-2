@@ -8,6 +8,7 @@
 }
 
 .frame-div {
+    position: relative;
     border: 2px solid crimson;
     /* overflow: hidden; */ 
     width: 720px;
@@ -21,4 +22,31 @@
 .slides-div img {
     height: 405px;
     width: 720px;
+}
+
+.back-button, .next-button {
+    position: absolute;
+    display: flex;
+    align-self: center;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    width: 40px;
+    height: 52px;
+}
+
+.back-button:hover, .next-button:hover {
+    background-color: rgba(0,0,0,0.5);
+}
+
+.back-button {
+    background: url(./img/arrow_back_ios_45dp_FFFFFF_FILL0_wght400_GRAD0_opsz48.svg);
+    left: 0;
+    background-repeat: no-repeat;
+}
+
+.next-button {
+    background: url(./img/arrow_forward_ios_45dp_FFFFFF_FILL0_wght400_GRAD0_opsz48.svg);
+    right: 0;
+    background-repeat: no-repeat;
 }
