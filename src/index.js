@@ -4,6 +4,7 @@ let slideIndex = 0; // Initial index
 const nextButton = document.querySelector(".next-button");
 const backButton = document.querySelector(".back-button");
 let slides = document.querySelectorAll(".slide");
+let dots = document.querySelectorAll(".nav-dot");
 
 function showSlide(num) {
     if (num >= slides.length) { // If index number exceeds slides length, wrap to beginning of slides
@@ -23,6 +24,11 @@ function showSlide(num) {
     })
 
     slides[slideIndex].style.display = "block"; // Sets first index of images to visible block display
+
+    dots.forEach(dot => { // Removes active class from all dots
+        dot.classList.remove("active");
+    })
+    dots[slideIndex].classList.add("active"); // Sets active class based on current slide index
 }
 
 nextButton.addEventListener("click", () => { // Moves forward in slides length
@@ -33,4 +39,10 @@ backButton.addEventListener("click", () => { // Moves back in slides length
     showSlide(slideIndex - 1);
 })
 
-showSlide(slideIndex);
+dots.forEach((dot, i) => { // Links to each slide and shows it, using slideIndex
+    dot.addEventListener("click", () => {
+        showSlide(i)
+    })
+})
+
+showSlide(slideIndex); // Init
