@@ -4,13 +4,15 @@
 
 #carousel-container-div {
     display: flex;
+    flex-direction: column;
     justify-self: center;
+    align-items: center;
+    gap: 10px;
 }
 
 .frame-div {
     position: relative;
     border: 2px solid crimson;
-    /* overflow: hidden; */ 
     width: 720px;
     height: 405px;
 }
@@ -49,4 +51,26 @@
     background: url(./img/arrow_forward_ios_45dp_FFFFFF_FILL0_wght400_GRAD0_opsz48.svg);
     right: 0;
     background-repeat: no-repeat;
+}
+
+#nav-dot-div {
+    display: flex;
+    gap: 5px;
+}
+
+.nav-dot {
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+}
+
+.nav-dot:hover {
+    border: 2px solid blue;
+}
+
+.active {
+    background-color: black;
 }
