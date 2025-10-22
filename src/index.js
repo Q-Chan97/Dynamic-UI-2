@@ -45,4 +45,12 @@ dots.forEach((dot, i) => { // Links to each slide and shows it, using slideIndex
     })
 })
 
+function advanceSlide() { // Advances slides, wrap around works
+    setInterval(() => {
+        slideIndex++ // Advance index to next slide
+        showSlide(slideIndex); // Show slide
+    }, 5000);
+}
+
 showSlide(slideIndex); // Init
+advanceSlide(); // Run advance slide
