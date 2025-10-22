@@ -14,7 +14,7 @@ function showSlide(num) {
         slideIndex = slides.length - 1;
     }
 
-    else {
+    else { // Updates slideIndex normally
         slideIndex = num;
     }
 
